@@ -8,7 +8,16 @@
 
 #import "PersistentViewController.h"
 
+static NSString * const nameKey = @"nameKey";
+static NSString * const scoreKey = @"scoreKey";
+static NSString * const steppetKey = @"stepperKey";
+static NSString * const playerKey = @"playerKey";
+
 @interface PersistentViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *playerNameTextField;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
@@ -17,6 +26,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSDictionary *player = [[NSUserDefaults standardUserDefaults] objectForKey:playerKey];
+    
+    [self updateWithPlayerDictionary:player];
+    
+}
+
+- (void)updateWithPlayerDictionary: (NSDictionary *) player {
+    
+    NSNumber *score = player [scoreKey];
+    
+    self.playerNameTextField.text = player [nameKey];
+    
+    self.scoreLabel.text = [score stringValue];
+    
+    self.stepper.value = [score doubleValue];
+    
+}
+
+- (IBAction)stepperVilueChanged:(id)sender {
+    
+    UIStepper *stepper = sender;
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@"%.0f", stepper.value];
+    
+}
+
+- (IBAction)save:(id)sender {
+    NSMutableDictionary *playerDictionary = [NSMutableDictionary new];
+    
+    playerDictionary[nameKey] = self.playerNameTextField.text;
+    playerDictionary[scoreKey] = @(self.stepper.value);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:playerDictionary forKey:playerKey];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

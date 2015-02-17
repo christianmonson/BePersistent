@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98ECCBA4-7452-4E0D-A104-5F35D33A5980</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BePersistent</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D3027A869459A54B5825FAD02BD067388D60C018</key>
+		<string>https://github.com/christianmonson/BePersistent.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BePersistent.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D3027A869459A54B5825FAD02BD067388D60C018</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/christianmonson/BePersistent.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D3027A869459A54B5825FAD02BD067388D60C018</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3027A869459A54B5825FAD02BD067388D60C018</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BePersistent</string>
+		</dict>
+	</array>
+</dict>
+</plist>
